@@ -388,6 +388,30 @@
 				}
 			],
 			"sid": 465553139585428
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 411437650563874
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 979679211209957,
+					"parameters": {
+						"audio-file": "Bells",
+						"loop": "looping",
+						"volume": "-6",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 656283133585220
 		}
 	],
 	"sid": 516847117888192
