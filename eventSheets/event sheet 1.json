@@ -3,13 +3,23 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "SanityMeter",
+			"type": "number",
+			"initialValue": "20",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 974080146676748
+		},
+		{
+			"eventType": "variable",
 			"name": "foodOnScreenAmount",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 432750423282044
+			"sid": 983226058429936
 		},
 		{
 			"eventType": "block",
@@ -390,28 +400,166 @@
 			"sid": 465553139585428
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Sanity Meter",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 411437650563874
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 803131299859039,
+							"parameters": {
+								"interval-seconds": "1.5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 678960377909856,
+							"parameters": {
+								"variable": "SanityMeter",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 377525919625897
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 454356111821352
+						}
+					],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "Sanity",
+							"sid": 889617409708437,
+							"parameters": {
+								"width": "258*(SanityMeter/10)"
+							}
+						}
+					],
+					"sid": 341574871170045
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 132403693776595,
+							"parameters": {
+								"variable": "SanityMeter",
+								"comparison": 0,
+								"value": "20"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Sanity",
+							"sid": 584083145494404,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 606568358961648
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 544112614220150,
+							"parameters": {
+								"variable": "SanityMeter",
+								"comparison": 3,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Sanity",
+							"sid": 141784725915065,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 880209047345602
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 253984700313124,
+							"parameters": {
+								"variable": "SanityMeter",
+								"comparison": 3,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Sanity",
+							"sid": 620342464102813,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 544214917916232
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 101068517523579,
+							"parameters": {
+								"variable": "SanityMeter",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 841900367646183
+						},
+						{
+							"id": "reset-global-variables",
+							"objectClass": "System",
+							"sid": 979307966086396
+						}
+					],
+					"sid": 453432441917562
 				}
 			],
-			"actions": [
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 979679211209957,
-					"parameters": {
-						"audio-file": "Bells",
-						"loop": "looping",
-						"volume": "-6",
-						"tag-optional": "\"\""
-					}
-				}
-			],
-			"sid": 656283133585220
+			"sid": 571983391484351
 		}
 	],
 	"sid": 516847117888192
