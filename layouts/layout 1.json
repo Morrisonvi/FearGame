@@ -42,7 +42,7 @@
 					"type": "bunny",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "MouthClosed",
+						"initial-animation": "Run_Down",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -53,10 +53,10 @@
 					"world": {
 						"x": 124,
 						"y": 253,
-						"width": 79.60000000000001,
-						"height": 85.53999999999999,
-						"originX": 0.5025125628140703,
-						"originY": 0.502127659574468,
+						"width": 17,
+						"height": 20,
+						"originX": 0.29411764705882354,
+						"originY": 0.85,
 						"color": [
 							1,
 							1,
