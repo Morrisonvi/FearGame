@@ -61,6 +61,38 @@
 			"author": "Scirra",
 			"version": "r210.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Turret",
+			"name": "Turret",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "zlhfpuvi5s8",

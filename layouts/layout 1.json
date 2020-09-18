@@ -49,14 +49,31 @@
 					},
 					"uid": 2,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						},
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"default-controls": true,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
 						"x": 124,
 						"y": 253,
-						"width": 17,
-						"height": 20,
-						"originX": 0.29411764705882354,
-						"originY": 0.85,
+						"width": 20,
+						"height": 17,
+						"originX": 0.85,
+						"originY": 0.7058823529411764,
 						"color": [
 							1,
 							1,
@@ -80,85 +97,28 @@
 					"instanceVariables": {
 						"Release": false
 					},
-					"behaviors": {},
+					"behaviors": {
+						"Turret": {
+							"properties": {
+								"range": 300,
+								"rate-of-fire": 1,
+								"rotate": true,
+								"rotate-speed": 180,
+								"target-mode": "first-in-range",
+								"predictive-aim": true,
+								"projectile-speed": 500,
+								"use-collision-cells": true,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
-						"x": 524,
-						"y": 259,
+						"x": 566,
+						"y": 312,
 						"width": 109,
 						"height": 106,
 						"originX": 0.5,
 						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "bunnyHitBox",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 8,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 121,
-						"y": 258,
-						"width": 25,
-						"height": 22,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							0
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Instructions",
-					"properties": {
-						"text": "click to feed the bunny",
-						"enable-bbcode": true,
-						"font": "Comic Sans MS",
-						"size": 32,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.5058823529411764,
-							0.08627450980392157,
-							0.7333333333333333,
-							1
-						],
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left"
-					},
-					"uid": 4,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 122,
-						"y": 327,
-						"width": 408,
-						"height": 165,
-						"originX": 0,
-						"originY": 0,
 						"color": [
 							1,
 							1,
