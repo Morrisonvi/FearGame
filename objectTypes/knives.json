@@ -1,0 +1,57 @@
+{
+	"name": "knives",
+	"plugin-id": "Sprite",
+	"sid": 865819396516175,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 332,
+						"height": 778,
+						"originX": 0.5210843373493976,
+						"originY": 0.5925449871465296,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5345345,
+						"collisionPoly": {
+							"points": [
+								0.3512048268892679,
+								0.13701799780053775,
+								0.4879518065107874,
+								0.009768637716004044,
+								0.6487951731107292,
+								0.13701799780053775,
+								0.6686746916138971,
+								0.6886889480992884,
+								0.9602409629936678,
+								0.7143958806991577,
+								0.5144578311816755,
+								0.9886889457702637,
+								0,
+								0.7285346984863281,
+								0.3512048268892679,
+								0.6886889480992884
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 200991561843684,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

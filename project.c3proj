@@ -109,7 +109,10 @@
 			"Instructions",
 			"Eyes",
 			"Sanity",
-			"SanityText"
+			"SanityText",
+			"knives",
+			"bullets",
+			"fireball"
 		],
 		"subfolders": []
 	},
@@ -152,12 +155,23 @@
 					"name": "Bells.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 203141597730810
+				},
+				{
+					"name": "Devils Chamber LOOP.wav",
+					"type": "audio/wav",
+					"sid": 939551736086699
 				}
 			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "Silence LOOP.wav",
+					"type": "audio/wav",
+					"sid": 918733010955618
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
