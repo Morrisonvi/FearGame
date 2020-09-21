@@ -322,33 +322,27 @@
 		},
 		{
 			"eventType": "block",
-			"conditions": [],
-			"actions": [],
-			"sid": 969203082004865
-		},
-		{
-			"eventType": "block",
 			"conditions": [
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 972186088617255
+					"sid": 100878075868914
 				}
 			],
 			"actions": [
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 509372000318479,
+					"sid": 891006594386353,
 					"parameters": {
-						"audio-file": "Silence LOOP",
+						"audio-file": "Bells",
 						"loop": "looping",
 						"volume": "0",
 						"tag-optional": "\"\""
 					}
 				}
 			],
-			"sid": 564627613894321
+			"sid": 750082768089384
 		}
 	],
 	"sid": 516847117888192
