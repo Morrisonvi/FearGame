@@ -60,7 +60,7 @@
 								"max-speed": 200,
 								"acceleration": 600,
 								"deceleration": 500,
-								"directions": "dir-8",
+								"directions": "dir-4",
 								"set-angle": "smooth",
 								"default-controls": true,
 								"enabled": true
