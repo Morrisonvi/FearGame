@@ -316,6 +316,106 @@
 						}
 					],
 					"sid": 463422149543854
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 853673968907876,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "bunny",
+							"sid": 891231905033315,
+							"parameters": {
+								"animation": "\"Idle_up\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 265808778989959
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 625191944087351,
+							"parameters": {
+								"key": 40
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "bunny",
+							"sid": 287026308222191,
+							"parameters": {
+								"animation": "\"Idle_down\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 903384811875824
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 416204068775823,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "bunny",
+							"sid": 927384678880442,
+							"parameters": {
+								"animation": "\"Idle_Right\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 613148099599916
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 849394391792295,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "bunny",
+							"sid": 809437839671503,
+							"parameters": {
+								"animation": "\"Idle_Left\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 307274821762119
 				}
 			],
 			"sid": 462024286537780
