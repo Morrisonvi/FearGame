@@ -152,11 +152,6 @@
 					"sid": 414782323902734
 				},
 				{
-					"name": "Bells.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 203141597730810
-				},
-				{
 					"name": "Silence INTRO.wav",
 					"type": "audio/wav",
 					"sid": 201259101124518
@@ -165,7 +160,13 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "Bells.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 203141597730810
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
