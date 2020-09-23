@@ -82,17 +82,10 @@
 						}
 					},
 					"world": {
-<<<<<<< HEAD:layouts/layout 1.json
-						"x": 439,
-						"y": 219,
-						"width": 42.19364276571264,
-						"height": 35.86459635085575,
-=======
 						"x": 133.55184947476292,
 						"y": 264.91835412968743,
 						"width": 38,
 						"height": 32,
->>>>>>> ad7fd3fa2cef235baf4c3ff7bbe35b73f5cdb2e3:layouts/game layout.json
 						"originX": 0.5,
 						"originY": 0.5294117647058824,
 						"color": [
@@ -232,29 +225,14 @@
 					},
 					"uid": 4,
 					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": 250,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
+					"behaviors": {},
 					"world": {
-						"x": -769,
-						"y": 147,
-						"width": 68.74568771730715,
-						"height": 19.714407406381145,
-						"originX": 0.41546526867627787,
-						"originY": 0.5210843373493976,
+						"x": 518.0851269025407,
+						"y": 566.8321410215717,
+						"width": 22.912933580794196,
+						"height": 46.19821976555582,
+						"originX": 0.5210843373493976,
+						"originY": 0.5925449871465296,
 						"color": [
 							1,
 							1,
@@ -262,6 +240,35 @@
 							1
 						],
 						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "bullets",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 8,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 462,
+						"y": 568,
+						"width": 47.9656422929272,
+						"height": 12.550417321911217,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.699730880325996,
 						"zElevation": 0
 					}
 				},
@@ -274,40 +281,14 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 17,
+					"uid": 13,
 					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": -1,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"Bullet2": {
-							"properties": {
-								"speed": 400,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
+					"behaviors": {},
 					"world": {
-						"x": 734,
-						"y": 341,
-						"width": 36.83865103375189,
-						"height": 32.37134079429319,
+						"x": 425.49105701651627,
+						"y": 563.332004986398,
+						"width": 24.38108114041063,
+						"height": 17.438162193013568,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -316,188 +297,7 @@
 							1,
 							1
 						],
-						"angle": 4.687518487573085,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "bullets",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 19,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": 300,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-<<<<<<< HEAD:layouts/layout 1.json
-						"x": 1330,
-						"y": 233,
-=======
-						"x": 462,
-						"y": 568,
->>>>>>> ad7fd3fa2cef235baf4c3ff7bbe35b73f5cdb2e3:layouts/game layout.json
-						"width": 47.9656422929272,
-						"height": 12.550417321911217,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 3.134003333427748,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "knives",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 20,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": 250,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 751,
-						"y": 177,
-						"width": 68.74568771730715,
-						"height": 19.714407406381145,
-						"originX": 0.41546526867627787,
-						"originY": 0.5210843373493976,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 3.1289537461832126,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "knives",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 23,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": 250,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 1225,
-						"y": 31,
-						"width": 68.74568771730715,
-						"height": 19.714407406381145,
-						"originX": 0.41546526867627787,
-						"originY": 0.5210843373493976,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 2.9161711752312502,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "bullets",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 25,
-					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": 300,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": true
-							}
-						},
-						"DestroyOutsideLayout": {
-							"properties": {}
-						}
-					},
-					"world": {
-						"x": 737,
-						"y": 268,
-						"width": 47.9656422929272,
-						"height": 12.550417321911217,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 3.1687803058760307,
+						"angle": 0,
 						"zElevation": 0
 					}
 				},
