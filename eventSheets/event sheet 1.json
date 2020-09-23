@@ -565,6 +565,128 @@
 				}
 			],
 			"sid": 207004338846005
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "fireball",
+					"sid": 400742540787138
+				},
+				{
+					"id": "while",
+					"objectClass": "System",
+					"sid": 868382020924969
+				},
+				{
+					"id": "is-on-screen",
+					"objectClass": "fireball",
+					"sid": 784075330675106
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "fireball",
+					"sid": 492033445083799,
+					"parameters": {
+						"x": "floor(random(0,LayoutWidth))",
+						"y": "floor(random(LayoutHeight))"
+					}
+				}
+			],
+			"sid": 360287939266556,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "fireball",
+							"sid": 703949536323279,
+							"parameters": {
+								"x": "bunny.X",
+								"y": "bunny.Y"
+							}
+						}
+					],
+					"sid": 577096260747843
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Object movement "
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 433094140958011,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 462924320639627,
+					"parameters": {
+						"object-to-create": "fireball",
+						"layer": "0",
+						"x": "random(LayoutWidth)",
+						"y": "random(LayoutHeight)"
+					}
+				}
+			],
+			"sid": 582044145334847
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "fireball",
+					"sid": 361060031300554
+				},
+				{
+					"id": "while",
+					"objectClass": "System",
+					"sid": 220939390326390
+				},
+				{
+					"id": "is-on-screen",
+					"objectClass": "fireball",
+					"sid": 964759630670906
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "fireball",
+					"sid": 452849468567928,
+					"parameters": {
+						"x": "floor(random(0,LayoutWidth))",
+						"y": "floor(random(0,LayoutHeight))"
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "fireball",
+					"sid": 232955185318485,
+					"parameters": {
+						"x": "bunny.x",
+						"y": "bunny.Y"
+					}
+				}
+			],
+			"sid": 705213989166621
 		}
 	],
 	"sid": 516847117888192
