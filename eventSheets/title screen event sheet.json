@@ -1,0 +1,56 @@
+{
+	"name": "Title Screen Event sheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 799578617462193,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "PlayText"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 622033435810657,
+					"parameters": {
+						"layout": "Game Layout"
+					}
+				}
+			],
+			"sid": 983721881845552
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 584330049303256,
+					"parameters": {
+						"object": "PlayText"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 563516110658651,
+					"parameters": {
+						"cursor-style": "hand"
+					}
+				}
+			],
+			"sid": 428129969627080
+		}
+	],
+	"sid": 964699908236324
+}

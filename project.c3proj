@@ -80,6 +80,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r210.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Turret",
 			"name": "Turret",
 			"author": "Scirra",
@@ -112,7 +120,13 @@
 			"knives",
 			"bullets",
 			"fireball",
-			"Audio"
+			"Audio",
+			"BlackTile",
+			"GameOverText",
+			"RestartText",
+			"Title",
+			"Text",
+			"PlayText"
 		],
 		"subfolders": []
 	},
@@ -124,13 +138,17 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Title Screen",
+			"Game Layout",
+			"Game Over"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Event sheet 1",
+			"Game Over Event sheet",
+			"Title Screen Event sheet"
 		],
 		"subfolders": []
 	},
@@ -174,7 +192,13 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "PiecesNfi-LrOn.ttf",
+					"type": "application/font-sfnt",
+					"sid": 333655628217065
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {
@@ -300,5 +324,5 @@
 	},
 	"viewportWidth": 640,
 	"viewportHeight": 480,
-	"firstLayout": null
+	"firstLayout": "Title Screen"
 }

@@ -34,19 +34,32 @@
 			"sid": 381822202448780
 		},
 		{
+			"eventType": "comment",
+			"text": "Background music"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "food",
-					"sid": 163911503979644,
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 738492179975016
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 929454927544394,
 					"parameters": {
-						"object": "bunnyHitBox"
+						"audio-file": "Bells",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
-			"actions": [],
-			"sid": 592931428237757
+			"sid": 319810360886333
 		},
 		{
 			"eventType": "group",
@@ -180,6 +193,10 @@
 					"sid": 544214917916232
 				},
 				{
+					"eventType": "comment",
+					"text": "Bunny shakes and movement stops on death"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -195,14 +212,35 @@
 					],
 					"actions": [
 						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 841900367646183
+							"id": "stop",
+							"objectClass": "bunny",
+							"sid": 591695657449431,
+							"behaviorType": "8Direction"
 						},
 						{
-							"id": "reset-global-variables",
+							"id": "set-active",
+							"objectClass": "bunny",
+							"sid": 135698355284016,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
 							"objectClass": "System",
-							"sid": 979307966086396
+							"sid": 944659840259329,
+							"parameters": {
+								"seconds": "1.8"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 695505167522305,
+							"parameters": {
+								"layout": "Game Over"
+							}
 						}
 					],
 					"sid": 453432441917562
@@ -421,28 +459,112 @@
 			"sid": 462024286537780
 		},
 		{
+			"eventType": "comment",
+			"text": "Restores Sanity"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 100878075868914
+					"id": "on-collision-with-another-object",
+					"objectClass": "food",
+					"sid": 915959952781568,
+					"parameters": {
+						"object": "bunny"
+					}
 				}
 			],
 			"actions": [
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 891006594386353,
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 573567122843015,
 					"parameters": {
-						"audio-file": "Bells",
-						"loop": "looping",
-						"volume": "0",
-						"tag-optional": "\"\""
+						"variable": "SanityMeter",
+						"value": "1"
 					}
 				}
 			],
-			"sid": 750082768089384
+			"sid": 560631759085423
+		},
+		{
+			"eventType": "comment",
+			"text": "Damages Sanity"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "fireball",
+					"sid": 896962904801584,
+					"parameters": {
+						"object": "bunny"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 762650602157534,
+					"parameters": {
+						"variable": "SanityMeter",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 560492137188974
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "knives",
+					"sid": 147965427660339,
+					"parameters": {
+						"object": "bunny"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 432942379876922,
+					"parameters": {
+						"variable": "SanityMeter",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 626337758787892
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullets",
+					"sid": 268738592777134,
+					"parameters": {
+						"object": "bunny"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 930485292439491,
+					"parameters": {
+						"variable": "SanityMeter",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 207004338846005
 		}
 	],
 	"sid": 516847117888192
