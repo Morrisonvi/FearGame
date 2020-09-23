@@ -4,7 +4,23 @@
 	"sid": 964699521266250,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 498154448745169
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet2",
+			"sid": 535429898316816
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 117089447230082
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -18,25 +34,25 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6598160,
+						"imageSpriteId": 803999,
 						"collisionPoly": {
 							"points": [
 								0,
-								0,
 								0.5,
 								0,
+								0.0017857142857142794,
+								0.5,
+								0.0017857142857142794,
 								0.9988636363636364,
-								0,
+								0.0017857142857142794,
 								0.9988636363636364,
 								0.5,
 								0.9988636363636364,
-								0.9982142857142857,
+								1,
 								0.5,
-								0.9982142857142857,
+								1,
 								0,
-								0.9982142857142857,
-								0,
-								0.5
+								1
 							]
 						},
 						"useCollisionPoly": true,

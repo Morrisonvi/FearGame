@@ -443,6 +443,156 @@
 				}
 			],
 			"sid": 750082768089384
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 634803194372963,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 382467574014497,
+					"parameters": {
+						"object-to-create": "fireball",
+						"layer": "0",
+						"x": "random(LayOutwidth)",
+						"y": "random(LayoutHeight)"
+					}
+				}
+			],
+			"sid": 585643936765624
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "fireball",
+					"sid": 486159001236881
+				},
+				{
+					"id": "while",
+					"objectClass": "System",
+					"sid": 524144175576569
+				},
+				{
+					"id": "is-on-screen",
+					"objectClass": "fireball",
+					"sid": 982282461864258
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "fireball",
+					"sid": 475703934923171,
+					"parameters": {
+						"x": "floor(random(0,LayoutWidth))",
+						"y": "floor(random(0,LayoutHeight))"
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "fireball",
+					"sid": 809511590267811,
+					"parameters": {
+						"x": "bunny.X",
+						"y": "bunny.Y"
+					}
+				}
+			],
+			"sid": 236785587292137
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "knives",
+					"sid": 801576941477540
+				},
+				{
+					"id": "while",
+					"objectClass": "System",
+					"sid": 711135836967650
+				},
+				{
+					"id": "is-on-screen",
+					"objectClass": "knives",
+					"sid": 422577155662835
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "knives",
+					"sid": 883217512435844,
+					"parameters": {
+						"x": "floor(random(0,LayoutWidth))",
+						"y": "floor(random(0,LayoutHeight))"
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "knives",
+					"sid": 914888072474730,
+					"parameters": {
+						"x": "bunny.X",
+						"y": "bunny.Y"
+					}
+				}
+			],
+			"sid": 720465265115108
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "bullets",
+					"sid": 216876900252134
+				},
+				{
+					"id": "while",
+					"objectClass": "System",
+					"sid": 550500001426680
+				},
+				{
+					"id": "is-on-screen",
+					"objectClass": "bullets",
+					"sid": 227553892217046
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "bullets",
+					"sid": 724709588902108,
+					"parameters": {
+						"x": "floor(random(0,LayoutWidth))",
+						"y": "floor(random(0,LayoutHeight))"
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "bullets",
+					"sid": 406659832174380,
+					"parameters": {
+						"x": "bunny.X",
+						"y": "bunny.Y"
+					}
+				}
+			],
+			"sid": 373836787822263
 		}
 	],
 	"sid": 516847117888192
