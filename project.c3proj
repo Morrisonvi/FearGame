@@ -181,6 +181,16 @@
 					"name": "Silence INTRO.wav",
 					"type": "audio/wav",
 					"sid": 201259101124518
+				},
+				{
+					"name": "Hit_hurt 1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 916193839972017
+				},
+				{
+					"name": "Powerup 5.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 666150483521591
 				}
 			],
 			"subfolders": []

@@ -57,9 +57,9 @@
 						},
 						"8Direction": {
 							"properties": {
-								"max-speed": 200,
-								"acceleration": 500,
-								"deceleration": 500,
+								"max-speed": 300,
+								"acceleration": 650,
+								"deceleration": 700,
 								"directions": "dir-4",
 								"set-angle": "smooth",
 								"default-controls": true,

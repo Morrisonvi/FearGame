@@ -478,10 +478,26 @@
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 573567122843015,
+					"sid": 662361534029976,
 					"parameters": {
 						"variable": "SanityMeter",
-						"value": "1"
+						"value": "2"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "food",
+					"sid": 315152744262009
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 259875019406996,
+					"parameters": {
+						"audio-file": "Powerup 5",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -512,6 +528,22 @@
 						"variable": "SanityMeter",
 						"value": "1"
 					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "fireball",
+					"sid": 209366117230345
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 140278836889977,
+					"parameters": {
+						"audio-file": "Hit_hurt 1",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 560492137188974
@@ -530,6 +562,17 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 855089883410307,
+					"parameters": {
+						"audio-file": "Hit_hurt 1",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
 					"sid": 432942379876922,
@@ -537,6 +580,11 @@
 						"variable": "SanityMeter",
 						"value": "1"
 					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "knives",
+					"sid": 458109995303228
 				}
 			],
 			"sid": 626337758787892
@@ -555,6 +603,17 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 321660162341976,
+					"parameters": {
+						"audio-file": "Hit_hurt 1",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
 					"sid": 930485292439491,
@@ -562,63 +621,18 @@
 						"variable": "SanityMeter",
 						"value": "1"
 					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bullets",
+					"sid": 397108182948669
 				}
 			],
 			"sid": 207004338846005
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-created",
-					"objectClass": "fireball",
-					"sid": 400742540787138
-				},
-				{
-					"id": "while",
-					"objectClass": "System",
-					"sid": 868382020924969
-				},
-				{
-					"id": "is-on-screen",
-					"objectClass": "fireball",
-					"sid": 784075330675106
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle-toward-position",
-					"objectClass": "fireball",
-					"sid": 492033445083799,
-					"parameters": {
-						"x": "floor(random(0,LayoutWidth))",
-						"y": "floor(random(LayoutHeight))"
-					}
-				}
-			],
-			"sid": 360287939266556,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "set-angle-toward-position",
-							"objectClass": "fireball",
-							"sid": 703949536323279,
-							"parameters": {
-								"x": "bunny.X",
-								"y": "bunny.Y"
-							}
-						}
-					],
-					"sid": 577096260747843
-				}
-			]
-		},
-		{
 			"eventType": "comment",
-			"text": "Object movement "
+			"text": "Object movement fireball"
 		},
 		{
 			"eventType": "block",
@@ -626,9 +640,9 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 433094140958011,
+					"sid": 964914777601167,
 					"parameters": {
-						"interval-seconds": "1.0"
+						"interval-seconds": "1.4"
 					}
 				}
 			],
@@ -654,11 +668,6 @@
 					"id": "on-created",
 					"objectClass": "fireball",
 					"sid": 361060031300554
-				},
-				{
-					"id": "while",
-					"objectClass": "System",
-					"sid": 220939390326390
 				},
 				{
 					"id": "is-on-screen",
@@ -687,6 +696,279 @@
 				}
 			],
 			"sid": 705213989166621
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "fireball",
+					"sid": 333036471353396
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "fireball",
+					"sid": 285571772260197
+				}
+			],
+			"sid": 640286035070555
+		},
+		{
+			"eventType": "comment",
+			"text": "carrot movement"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 881371210058480,
+					"parameters": {
+						"interval-seconds": "2.5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 910328642525927,
+					"parameters": {
+						"object-to-create": "food",
+						"layer": "0",
+						"x": "random(LayoutWidth)",
+						"y": "random(LayoutHeight)"
+					}
+				}
+			],
+			"sid": 528423634497238
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "food",
+					"sid": 357764979991227
+				},
+				{
+					"id": "is-on-screen",
+					"objectClass": "food",
+					"sid": 943204787095349
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "food",
+					"sid": 121405683298952,
+					"parameters": {
+						"x": "floor(random(0,LayoutWidth))",
+						"y": "floor(random(0,LayoutHeight))"
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "food",
+					"sid": 610776381201652,
+					"parameters": {
+						"x": "bunny.x",
+						"y": "bunny.Y"
+					}
+				}
+			],
+			"sid": 419214536959344
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "food",
+					"sid": 286984540251703
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "food",
+					"sid": 170831681311583
+				}
+			],
+			"sid": 167406705115791
+		},
+		{
+			"eventType": "comment",
+			"text": "knife movement"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 437107846095168,
+					"parameters": {
+						"interval-seconds": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 154750553322109,
+					"parameters": {
+						"object-to-create": "knives",
+						"layer": "0",
+						"x": "random(LayoutWidth)",
+						"y": "random(LayoutHeight)"
+					}
+				}
+			],
+			"sid": 144846619360299
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "knives",
+					"sid": 446305074391285
+				},
+				{
+					"id": "is-on-screen",
+					"objectClass": "knives",
+					"sid": 719787645276661
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "knives",
+					"sid": 387840394060642,
+					"parameters": {
+						"x": "floor(random(0,LayoutWidth))",
+						"y": "floor(random(0,LayoutHeight))"
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "knives",
+					"sid": 164994244202415,
+					"parameters": {
+						"x": "bunny.x",
+						"y": "bunny.Y"
+					}
+				}
+			],
+			"sid": 821654526300018
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "knives",
+					"sid": 973884793387959
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "knives",
+					"sid": 302789516859266
+				}
+			],
+			"sid": 635854578971997
+		},
+		{
+			"eventType": "comment",
+			"text": "Bullet movement"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 679329821627837,
+					"parameters": {
+						"interval-seconds": "7"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 735758336408603,
+					"parameters": {
+						"object-to-create": "bullets",
+						"layer": "0",
+						"x": "random(LayoutWidth)",
+						"y": "random(LayoutHeight)"
+					}
+				}
+			],
+			"sid": 987523497357490
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "bullets",
+					"sid": 695785988422797
+				},
+				{
+					"id": "is-on-screen",
+					"objectClass": "bullets",
+					"sid": 142514938274107
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "bullets",
+					"sid": 303991209410222,
+					"parameters": {
+						"x": "floor(random(0,LayoutWidth))",
+						"y": "floor(random(0,LayoutHeight))"
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "bullets",
+					"sid": 475702348201455,
+					"parameters": {
+						"x": "bunny.x",
+						"y": "bunny.Y"
+					}
+				}
+			],
+			"sid": 115012532594924
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "bullets",
+					"sid": 938180311880913
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bullets",
+					"sid": 234515441199604
+				}
+			],
+			"sid": 740277874584140
 		}
 	],
 	"sid": 516847117888192
