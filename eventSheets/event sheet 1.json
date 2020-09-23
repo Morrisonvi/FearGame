@@ -593,6 +593,60 @@
 				}
 			],
 			"sid": 373836787822263
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 892109059906821,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 335538678574481,
+					"parameters": {
+						"object-to-create": "bullets",
+						"layer": "0",
+						"x": "random(LayOutwidth)",
+						"y": "random(LayoutHeight)"
+					}
+				}
+			],
+			"sid": 765480901303373
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 133793669045786,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 244597199537051,
+					"parameters": {
+						"object-to-create": "knives",
+						"layer": "0",
+						"x": "random(LayOutwidth)",
+						"y": "random(LayoutHeight)"
+					}
+				}
+			],
+			"sid": 784177596739049
 		}
 	],
 	"sid": 516847117888192
